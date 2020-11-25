@@ -1,0 +1,54 @@
+.col1 {
+  background: #1890ff;
+}
+.col2 {
+  background: #52c41a;
+}
+.col3 {
+  background: #faad14;
+}
+.col4 {
+  background: #f5222d;
+}
+.col15 {
+  background: #d9d9d9;
+}
+.ant-row {
+  margin-bottom: 10px;
+}
+.tag {
+  width: 0.5;
+  height: 30.5px;
+}
+.common {
+  border: dotted 2px green;
+}
+#tag1 a {
+  width: 0.5;
+  height: 30.5px;
+  border: dotted 2px green;
+}
+#tag2 a {
+  width: 0.5;
+  height: 30.5px;
+  border: dotted 2px green;
+}
+@media (min-width: 768px) {
+  .element {
+    font-size: 1.2rem;
+  }
+}
+.class {
+  width: 50%;
+  color: #f6430f;
+  background-color: #f8b38d;
+}
+.button {
+  color: blue;
+  border: 1px solid green;
+}
+#tag4 a {
+  width: 0.5;
+  height: 30.5px;
+  border: dotted 2px green;
+}

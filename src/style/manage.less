@@ -1,0 +1,97 @@
+@them-color:#1890ff;
+@link-color: #1890ff; // 链接色
+@success-color: #52c41a; // 成功色
+@warning-color: #faad14; // 警告色
+@error-color: #f5222d; // 错误色
+@font-size-base: 14px; // 主字号
+@heading-color: rgba(0, 0, 0, 0.85); // 标题色
+@text-color: rgba(0, 0, 0, 0.65); // 主文本色
+@text-color-secondary: rgba(0, 0, 0, 0.45); // 次文本色
+@disabled-color: rgba(0, 0, 0, 0.25); // 失效色
+@border-radius-base: 4px; // 组件/浮层圆角
+@border-color-base: #d9d9d9; // 边框色
+@box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); // 浮层阴影
+
+.col1{
+    background: @them-color;
+}
+.col2{
+    background: @success-color;
+}
+.col3{
+    background:@warning-color;
+}
+.col4{
+    background:@error-color;
+}
+.col15{
+    background:@border-color-base;
+}
+.ant-row{
+    margin-bottom: 10px;
+}
+
+// sass: {
+//     prependData: `
+//         @import "~@/style/index.scss";
+//     `,
+// },
+
+
+// 变量
+@width:30px;
+@height:@width + 30px;
+
+.tag{
+    width: @width;
+    height:@height;
+}
+
+
+// 混合
+.common{
+    border:dotted 2px green;
+}
+
+#tag1 a{
+    width:@width;
+    height: @height;
+    .common()
+}
+#tag2 a{
+    width:@width;
+    height: @height;
+    .common()
+}
+
+// 转义
+@min768: ~"(min-width: 768px)";
+.element {
+  @media @min768 {
+    font-size: 1.2rem;
+  }
+}
+
+
+// 函数
+
+@base: #f04615;
+@width: 0.5;
+
+.class {
+    width: percentage(@width); // returns `50%`
+    color: saturate(@base, 5%);
+    background-color: spin(lighten(@base, 25%), 8);
+  }
+
+
+//   映射
+#colors() {
+    primary: blue;
+    secondary: green;
+  }
+  
+  .button {
+    color: #colors[primary];
+    border: 1px solid #colors[secondary];
+  }
